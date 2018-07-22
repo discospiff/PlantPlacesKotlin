@@ -23,10 +23,13 @@ class GPSAPlant : AppCompatActivity() {
         }
 
         btnSave.setOnClickListener{view ->
-            var plantName = actPlantName.text.toString()
-            var location = actLocation.text.toString()
-            var description = edtDescription.text.toString()
 
+            var specimen = SpecimenDTO()
+            with(specimen) {
+                plantName = actPlantName.text.toString()
+                location = actLocation.text.toString()
+                description = edtDescription.text.toString()
+            }
             // populate a specimen object.
 
         }
