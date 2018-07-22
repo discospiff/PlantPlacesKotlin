@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/gpsCoordinatorLayout"
-    tools:context="edu.uc.jonesbr.plantplaces.GPSAPlant">
+    tools:context="edu.uc.jonesbr.plantplaceskotlin.GPSAPlant">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
