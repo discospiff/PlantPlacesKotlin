@@ -5,7 +5,9 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 import android.widget.Toast
+import edu.uc.jonesbr.plantplaceskotlin.dto.PlantDTO
 import edu.uc.jonesbr.plantplaceskotlin.dto.PlantList
 import edu.uc.jonesbr.plantplaceskotlin.dto.SpecimenDTO
 import kotlinx.android.synthetic.main.activity_gpsaplant.*
@@ -53,6 +55,8 @@ class GPSAPlant : AppCompatActivity() {
                 val body = response?.body()
                 val plants = body?.plants
                 var size = plants?.size
+                val adapter = ArrayAdapter<PlantDTO>(applicationContext, android.R.layout.simple_list_item_1, plants)
+                actPlantName.setAdapter(adapter)
 
             }
 
