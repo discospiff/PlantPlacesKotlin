@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.uc.jonesbr.plantplaceskotlin.GPSAPlant">
+    android:id="@+id/gpsCoordinatorLayout"
+    tools:context="edu.uc.jonesbr.plantplaces.GPSAPlant">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
