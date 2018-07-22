@@ -5,10 +5,15 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import edu.uc.jonesbr.plantplaceskotlin.dto.PlantList
+import edu.uc.jonesbr.plantplaceskotlin.dto.SpecimenDTO
 import kotlinx.android.synthetic.main.activity_gpsaplant.*
 
-import kotlinx.android.synthetic.main.activity_gpsaplant.*
 import kotlinx.android.synthetic.main.content_gpsaplant.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class GPSAPlant : AppCompatActivity() {
 
@@ -33,6 +38,34 @@ class GPSAPlant : AppCompatActivity() {
             // populate a specimen object.
 
         }
+
+        val service = RetrofitClientInstance.retrofitInstance?.create(GetPlantService::class.java)
+        val call = service?.getAllPlants()
+        call?.enqueue(object : Callback<PlantList> {
+            /**
+             * Invoked for a received HTTP response.
+             *
+             *
+             * Note: An HTTP response may still indicate an application-level failure such as a 404 or 500.
+             * Call [Response.isSuccessful] to determine if the response indicates success.
+             */
+            override fun onResponse(call: Call<PlantList>?, response: Response<PlantList>?) {
+                val body = response?.body()
+                val plants = body?.plants
+                var size = plants?.size
+
+            }
+
+            /**
+             * Invoked when a network exception occurred talking to the server or when an unexpected
+             * exception occurred creating the request or processing the response.
+             */
+            override fun onFailure(call: Call<PlantList>?, t: Throwable?) {
+                Toast.makeText(applicationContext, "Error reading JSON", Toast.LENGTH_LONG).show()
+            }
+
+        })
+
 
 
 

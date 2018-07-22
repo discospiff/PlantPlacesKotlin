@@ -1,4 +1,4 @@
-package edu.uc.jonesbr.plantplaceskotlin
+package edu.uc.jonesbr.plantplaceskotlin.dto
 
 /**
  * Created by ucint on 7/22/2018.
