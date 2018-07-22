@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.google.firebase.database.FirebaseDatabase
 import edu.uc.jonesbr.plantplaceskotlin.dto.PlantDTO
 import edu.uc.jonesbr.plantplaceskotlin.dto.PlantList
 import edu.uc.jonesbr.plantplaceskotlin.dto.SpecimenDTO
@@ -36,8 +37,12 @@ class GPSAPlant : AppCompatActivity() {
                 plantName = actPlantName.text.toString()
                 location = actLocation.text.toString()
                 description = edtDescription.text.toString()
+
             }
             // populate a specimen object.
+            var firebaseDatabase = FirebaseDatabase.getInstance()
+            var databaseReference = firebaseDatabase.getReference()
+            databaseReference.child("specimens").push().setValue(specimen)
 
         }
 

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "956037405676",
+    "firebase_url": "https://plantplaceskotlin.firebaseio.com",
+    "project_id": "plantplaceskotlin",
+    "storage_bucket": "plantplaceskotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956037405676:android:17244b949ace0ee1",
+        "android_client_info": {
+          "package_name": "edu.uc.jonesbr.plantplaceskotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956037405676-man5erfnu7nujdmt8ja5q2v4e070gceh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5Tp_e-4CeVKFrCRfQ22RB93dD32bsyiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
