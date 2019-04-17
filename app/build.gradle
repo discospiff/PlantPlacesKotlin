@@ -37,7 +37,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.3.0"
     implementation 'com.google.firebase:firebase-core:16.0.0'
     implementation 'com.google.firebase:firebase-database:16.0.1'
-
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
 }
 
 
