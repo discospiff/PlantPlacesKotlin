@@ -7,7 +7,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import edu.uc.jonesbr.plantplaceskotlin.dto.PlantDTO
 import edu.uc.jonesbr.plantplaceskotlin.dto.PlantList
 import edu.uc.jonesbr.plantplaceskotlin.dto.SpecimenDTO
@@ -75,7 +78,24 @@ class GPSAPlant : AppCompatActivity() {
 
         })
 
+        val firebaseDatabase = FirebaseDatabase.getInstance();
+        val reference = firebaseDatabase.getReference()
+        reference.child("specimens").addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                // TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
 
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val children = dataSnapshot.children
+
+                children.forEach {
+                    Toast.makeText(applicationContext, it.toString(), Toast.LENGTH_LONG).show()
+                }
+
+            }
+
+        }
+        )
 
 
     }
