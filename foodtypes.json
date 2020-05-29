@@ -1,0 +1,23 @@
+[
+  {
+    "type": "Fruit"
+  },
+  {
+    "type": "Vegetable"
+  },
+  {
+    "type": "Meat"
+  },
+  {
+    "type": "Grain"
+  },
+  {
+    "type": "Condiment"
+  },
+  {
+    "type": "Desert"
+  },
+  {
+    "type": "Other"
+  }
+]
